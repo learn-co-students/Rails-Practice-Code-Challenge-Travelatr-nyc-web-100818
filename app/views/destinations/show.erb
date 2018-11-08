@@ -1,0 +1,35 @@
+<h1>Destination Show Page</h1>
+
+Name: <%= @destination.name %>
+<br>
+<br>
+Country: <%= @destination.country %>
+<br>
+<br>
+
+<% if @most_recent_posts != []%>
+Most Recent Posts:
+<ol>
+
+  <% @most_recent_posts.each do |post| %>
+    <li>
+      <%= post.title %>
+    </li>
+  <% end  %>
+
+</ol>
+<% end %>
+
+<% if @most_featured_post %>
+Most Featured Post:
+<br>
+<br>
+
+  <%= link_to @most_featured_post.title, @most_featured_post %>
+<% end %>
+<br>
+<br>
+<% if @ave_age.class == Fixnum %>
+  Average age of Bloggers:
+  <%= @ave_age %>
+<% end  %>

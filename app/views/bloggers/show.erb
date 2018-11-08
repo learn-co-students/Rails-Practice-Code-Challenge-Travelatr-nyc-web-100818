@@ -1,0 +1,22 @@
+<h1>Blogger Show Page</h1>
+
+Name: <p> <%= @blogger.name %></p>
+<br>
+Age: <p>  <%= @blogger.age %></p>
+<br>
+Bio: <p><%= @blogger.bio %></p>
+<br>
+Total likes: <p><%= @likes %></p>
+<br>
+Featured Post: <p><%= link_to @featured_post.title, @featured_post %></p>
+<br>
+Top Destination(s):
+
+<ol>
+  <% @top_5_array.each do |d| %>
+  <li>
+    <%= d %>
+    <% end %>
+  </li>
+
+</ol>
