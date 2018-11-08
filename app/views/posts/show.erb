@@ -1,0 +1,14 @@
+<h1>Post Show Page </h1>
+
+Title: <p><%= @post.title %></p>
+<br>
+<br>
+Blogger: <p><%= link_to @post.blogger.name, @post.blogger %></p>
+<br>
+<br>
+Destination: <p><%= link_to @post.destination.name, @post.destination %></p>
+<br>
+<br>
+Likes: <p><%= @post.likes%></p>
+
+<%= button_to "Like Post", @post %>

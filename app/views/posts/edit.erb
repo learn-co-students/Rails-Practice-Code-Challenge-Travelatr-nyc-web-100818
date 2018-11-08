@@ -1,0 +1,11 @@
+<h1>Edit Post</h1>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+  <ol>
+    <%= p e %>
+  </ol>
+  <% end  %>
+<% end %>
+<br><br>
+
+<%= render "form" %>
